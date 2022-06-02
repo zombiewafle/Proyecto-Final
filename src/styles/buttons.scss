@@ -1,0 +1,51 @@
+$buttonsColor: white;
+$buttonsBackground: #42414d;
+$bg: #393842;
+$bgDigits: #313038;
+
+.buttonCalc {
+  appearance: none;
+  border: none;
+  outline: none;
+  color: $buttonsColor;
+  font-size: 20px;
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: $buttonsBackground;
+}
+
+.buttonCalc:hover {
+  background-color: $bg;
+}
+
+#operators {
+  display: flex;
+}
+
+#operators .buttonCalc {
+  flex: 1 1 0%;
+}
+
+#digits .buttonCalc {
+  background-color: $bg;
+  transition: 0.4s;
+}
+
+#digits .buttonCalc:hover {
+  background-color: $bgDigits;
+}
+
+#digits {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#digits .buttonCalc {
+  flex: 1 1 33.33%;
+  max-width: 33.33%;
+}
+
+#buttons {
+  background-color: #313038;
+}
