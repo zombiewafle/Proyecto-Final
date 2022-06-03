@@ -1,0 +1,70 @@
+$bg-color: #181a1b;
+$text-color: white;
+$hover-color: rgba(255, 255, 255, 0.615);
+$header-color: rgb(34, 34, 34);
+
+#root{
+    display: flex;
+    flex-direction: column;
+}
+
+#headerContainer{
+    top: 0;
+    z-index: 2;
+    position:fixed;
+    background-color: $bg-color;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+#filler{
+    width: 50%;
+}
+
+////////////////////////////////////////
+.headerItems{
+    
+    color: $text-color;
+    text-decoration: none;
+    flex-grow: 1;
+    justify-content: left;
+    text-align: left;
+    margin-right: 15px;
+    
+
+    :link{
+        color: $text-color;
+        text-decoration: none;
+    }
+}
+
+.headerItems:hover{
+    transition: color  0.5s ease-out;
+    color: $hover-color;
+    text-decoration: none;
+}
+
+////////////////////////////////////////
+#cardsItem{
+    border-right: none;
+}
+
+////////////////////////////////////////
+
+#headerLogo{
+    width: 2.5%;
+    padding-right: 10px;
+}
+
+#uvgA{
+    width: 150px;
+}
+
+#uvg{
+    width: 100%;
+}

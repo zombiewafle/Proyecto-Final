@@ -1,0 +1,536 @@
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/card.scss ***!
+  \***************************************************************************************************************/
+@font-face {
+  font-family: titleFont;
+  src: url(5820d68d0f704bbe6ce3.ttf);
+}
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  position: relative;
+  border-radius: 16px;
+  width: 18rem;
+  height: 20rem;
+  background-color: #252d4a;
+  box-shadow: 5px 5px rgba(128, 128, 128, 0.15);
+}
+
+.card-story {
+  margin: 0px 20px 0px 20px;
+  position: relative;
+  border-radius: 16px;
+  width: 18rem;
+  height: 20rem;
+  background-color: #252d4a;
+  box-shadow: 5px 6px rgba(128, 128, 128, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-login {
+  margin: 0px 20px 0px 20px;
+  position: relative;
+  border-radius: 16px;
+  width: 18rem;
+  height: 20rem;
+  background-color: #252d4a;
+  box-shadow: 5px 6px rgba(128, 128, 128, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-calc {
+  margin: 0px 20px 0px 20px;
+  position: relative;
+  border-radius: 16px;
+  width: 18rem;
+  height: 20rem;
+  background-color: #252d4a;
+  box-shadow: 5px 6px rgba(128, 128, 128, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 2rem;
+}
+
+.card-title, .card-text {
+  color: white;
+  font-family: titleFont, sans-serif;
+}
+
+#game-image {
+  width: 75%;
+  padding: 35px 0px 0px 35px;
+}
+
+#story-image {
+  margin-left: 60px;
+  width: 60%;
+  border-radius: 16px;
+}
+
+#login-image {
+  width: 80%;
+  margin-left: 30px;
+  border-radius: 16px;
+}
+
+#calc-image {
+  width: 80%;
+  margin-left: 30px;
+  border-radius: 16px;
+}
+
+.card-button {
+  margin-left: 40%;
+  background-color: #3949ab;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  outline: 0;
+  text-transform: uppercase;
+  border-color: none;
+}
+
+#game-button {
+  margin-top: 40px;
+}
+
+#calc-button {
+  margin-top: 4px;
+}
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/calc.scss ***!
+  \***************************************************************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+}
+
+#root {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.calc {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 60px rgba(75, 72, 72, 0.2);
+}
+
+.display {
+  padding: 15px;
+  text-align: right;
+  background-color: #2b2a33;
+  color: white;
+  font-weight: 350;
+  font-size: 25px;
+}
+
+.display span {
+  font-size: 20px;
+  color: gray;
+  padding-right: 10px;
+}
+/*!******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/buttons.scss ***!
+  \******************************************************************************************************************/
+.buttonCalc {
+  appearance: none;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: #42414d;
+}
+
+.buttonCalc:hover {
+  background-color: #393842;
+}
+
+#operators {
+  display: flex;
+}
+
+#operators .buttonCalc {
+  flex: 1 1 0%;
+}
+
+#digits .buttonCalc {
+  background-color: #393842;
+  transition: 0.4s;
+}
+
+#digits .buttonCalc:hover {
+  background-color: #313038;
+}
+
+#digits {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#digits .buttonCalc {
+  flex: 1 1 33.33%;
+  max-width: 33.33%;
+}
+
+#buttons {
+  background-color: #313038;
+}
+/*!*************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/game/game.scss ***!
+  \*************************************************************************************************************/
+.dinoContainer {
+  width: 920px;
+  height: 280px;
+  margin: 0 auto;
+  position: relative;
+  background: linear-gradient(#b7d6c7, transparent) #ffe2d1;
+  /*linear-gradient(#90ebff, white);*/
+  transition: background-color 1s linear;
+  overflow: hidden;
+}
+
+.mediodia {
+  background-color: #ffdcf3;
+}
+
+.tarde {
+  background-color: #ffadad;
+}
+
+.noche {
+  background-color: #aca8c7;
+}
+
+.dino {
+  width: 84px;
+  height: 84px;
+  position: absolute;
+  bottom: 22px;
+  left: 42px;
+  z-index: 2;
+  background: url(523f4dc10e28acc3d771.png) repeat-x 0px 0px;
+  background-size: 336px 84px;
+  background-position-x: 0px;
+}
+
+.dino-corriendo {
+  animation: aniDino 0.25s steps(2) infinite;
+}
+
+.dino-estrellado {
+  background-position-x: -252px;
+}
+
+.floor {
+  width: 200%;
+  height: 42px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: url(9ee2227d64b3042c431d.png) repeat-x 0px 0px;
+  background-size: 50% 42px;
+}
+
+.cactus {
+  width: 46px;
+  height: 96px;
+  position: absolute;
+  bottom: 16px;
+  left: 600px;
+  z-index: 1;
+  background: url(afc5c9a7583f8e8d9d3c.png) no-repeat;
+}
+
+.cactus2 {
+  width: 98px;
+  height: 66px;
+  background: url(349083fe6a7acffe3fe8.png) no-repeat;
+}
+
+.nube {
+  width: 92px;
+  height: 26px;
+  position: absolute;
+  z-index: 0;
+  background: url(459f5262f27ab1f25d74.png) no-repeat;
+  background-size: 92px 26px;
+}
+
+.score {
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  z-index: 10;
+  color: #d48871;
+  font-family: Verdana;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.game-over {
+  display: none;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #7e928b;
+  font-size: 30px;
+  font-family: Verdana;
+  font-weight: 700;
+}
+
+@keyframes aniDino {
+  from {
+    background-position-x: -84px;
+  }
+  to {
+    background-position-x: -252px;
+  }
+}
+/*!*****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/header.scss ***!
+  \*****************************************************************************************************************/
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+#headerContainer {
+  top: 0;
+  z-index: 2;
+  position: fixed;
+  background-color: #181a1b;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+#filler {
+  width: 50%;
+}
+
+.headerItems {
+  color: white;
+  text-decoration: none;
+  flex-grow: 1;
+  justify-content: left;
+  text-align: left;
+  margin-right: 15px;
+}
+.headerItems :link {
+  color: white;
+  text-decoration: none;
+}
+
+.headerItems:hover {
+  transition: color 0.5s ease-out;
+  color: rgba(255, 255, 255, 0.615);
+  text-decoration: none;
+}
+
+#cardsItem {
+  border-right: none;
+}
+
+#headerLogo {
+  width: 2.5%;
+  padding-right: 10px;
+}
+
+#uvgA {
+  width: 150px;
+}
+
+#uvg {
+  width: 100%;
+}
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/body.scss ***!
+  \***************************************************************************************************************/
+#root {
+  background-color: #232627;
+}
+
+#bodyContainer {
+  left: 0;
+  right: 0;
+  padding-top: 30px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#summaryContainer {
+  padding-top: 50px;
+  background-color: #2f3234;
+}
+
+.summaries {
+  display: flex;
+  flex-direction: row;
+}
+
+#sum1, #sum2 {
+  color: white;
+  width: 50%;
+  text-align: center;
+  flex-grow: 1;
+  box-sizing: border-box;
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.summaryTitles {
+  font-weight: 400;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.summary {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.imageSummary {
+  height: 50px;
+  width: 50px;
+  background-color: gray;
+  border-radius: 50px;
+}
+
+#img1 {
+  width: 100px;
+  border-radius: 100px;
+}
+
+#img2 {
+  width: 200px;
+  border-radius: 50px;
+}
+/*!*******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/carousel.scss ***!
+  \*******************************************************************************************************************/
+#carouselExampleControls {
+  height: 100%;
+  background-color: #181a1b;
+  width: 100%;
+  right: 0;
+  left: 0;
+}
+
+.carousel-inner {
+  height: 40%;
+  border-radius: 30px;
+}
+/*!******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/contact.scss ***!
+  \******************************************************************************************************************/
+#contactContainer {
+  background-color: #3c3e3e;
+}
+/*!*****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/footer.scss ***!
+  \*****************************************************************************************************************/
+@font-face {
+  font-family: menuFont;
+  src: url(f817a099cb7e25067ffb.ttf);
+}
+.footer #divider {
+  background-color: white;
+  background-blend-mode: luminosity;
+  background-image: linear-gradient(to right, rgb(88, 88, 88), rgb(151, 148, 148), rgb(193, 191, 191), white, rgb(193, 191, 191), rgb(151, 148, 148), rgb(88, 88, 88));
+  height: 3px;
+  width: 100%;
+  display: flex;
+}
+
+.footer {
+  width: 100%;
+  background-color: rgb(34, 34, 34);
+}
+
+.footer #footerInfo {
+  flex-direction: row;
+  opacity: 0.9;
+  width: 100%;
+  display: flex;
+  font-family: menuFont;
+}
+
+.footer #footerInfo p {
+  color: rgba(255, 255, 255, 0.615);
+}
+
+.footer #footerInfo #dbInfo {
+  width: 80%;
+}
+
+.footer #footerInfo #dbInfo #info1 {
+  padding: 16px 32px 20px;
+}
+
+.footer #footerInfo #dbInfo #info2, #info3 {
+  padding: 0 0 0 32px;
+}
+
+.footer #footerInfo #advices {
+  width: 30%;
+  align-items: flex-end;
+  padding-top: 30px;
+  display: flex;
+  text-align: right;
+  flex-wrap: wrap;
+  justify-content: right;
+}
+
+#discordA {
+  height: 40px;
+  width: 40px;
+}
+
+#patreonA {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 35px;
+  width: 100px;
+}
+/*!*****************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/index.css ***!
+  \*****************************************************************/
+body{
+    background-color: #eee;
+    color:black;
+}
